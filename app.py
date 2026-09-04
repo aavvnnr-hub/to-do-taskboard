@@ -40,7 +40,7 @@ HTML_TEMPLATE = """
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Список задач</title>
     <style>
         * {
@@ -56,8 +56,10 @@ HTML_TEMPLATE = """
             min-height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             padding: 20px;
+            padding-top: max(20px, env(safe-area-inset-top));
+            padding-bottom: max(20px, env(safe-area-inset-bottom));
         }
 
         .container {
@@ -104,6 +106,10 @@ HTML_TEMPLATE = """
             margin-bottom: 6px;
         }
 
+        label:first-of-type {
+            margin-top: 0;
+        }
+
         input[type="text"],
         textarea {
             width: 100%;
@@ -132,8 +138,9 @@ HTML_TEMPLATE = """
 
         .btn {
             border: none;
-            border-radius: 30px;
+            border-radius: 14px;
             padding: 12px 20px;
+            min-height: 44px;
             font-size: 14px;
             font-weight: 600;
             cursor: pointer;
@@ -141,6 +148,7 @@ HTML_TEMPLATE = """
             text-align: center;
             color: #fff;
             width: 100%;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .btn-primary {
@@ -232,10 +240,10 @@ HTML_TEMPLATE = """
             font-size: 19px;
             font-weight: 600;
             color: #f0ecf5;
-            word-break: break-all;
-            overflow-wrap: break-word;
-            hyphens: auto;
+            overflow-wrap: anywhere;
+            word-break: break-word;
             flex: 1;
+            min-width: 0;
         }
 
         .task.done .task-title {
@@ -247,9 +255,8 @@ HTML_TEMPLATE = """
             color: #8b83a0;
             font-size: 15px;
             white-space: pre-wrap;
-            word-break: break-all;
-            overflow-wrap: break-word;
-            hyphens: auto;
+            overflow-wrap: anywhere;
+            word-break: break-word;
             line-height: 1.6;
             margin: 0;
             padding: 4px 0;

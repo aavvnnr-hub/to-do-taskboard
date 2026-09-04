@@ -87,10 +87,6 @@ DATABASE_URL=postgresql://user:password@host:5432/dbname
 └── README.md
 ```
 
-## Скриншот работы приложения
-
-![Скриншот приложения](docs/screenshot.png)
-
 ## Что я научился делать в этом проекте
 
 - Собирать Flask-приложение с SQLAlchemy
@@ -101,5 +97,5 @@ DATABASE_URL=postgresql://user:password@host:5432/dbname
 
 ## Контакты
 
-- GitHub: [github.com/your-username](https://github.com/your-username)
-- Email: your.email@example.com
+- GitHub: [github.com/aavvnnr-hub](https://github.com/aavvnnr-hub)
+- Email: aavvnnr@gmail.com

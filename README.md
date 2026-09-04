@@ -87,14 +87,6 @@ DATABASE_URL=postgresql://user:password@host:5432/dbname
 └── README.md
 ```
 
-## Что я научился делать в этом проекте
-
-- Собирать Flask-приложение с SQLAlchemy
-- Делать CRUD-операции: добавление, выполнение, возврат и удаление
-- Переключать SQLite и PostgreSQL через `DATABASE_URL`
-- Запускать приложение через Gunicorn
-- Деплоить сервис на Render по `render.yaml`
-
 ## Контакты
 
 - GitHub: [github.com/aavvnnr-hub](https://github.com/aavvnnr-hub)
